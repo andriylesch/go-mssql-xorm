@@ -22,7 +22,15 @@ func getOrm() *xorm.Engine {
 	checkErr(err, "Creating ORM object was failed")
 	return orm
 }
+
+
+// Init DB
+dbmanagers.InitDB(true) // parameter true will show sql code what was generated orm during requests to DB
+
 ```
+
+
+
 * Define your custom struct and made Sync2 *table* struct to DB
 
 ```Go
